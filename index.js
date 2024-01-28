@@ -11,9 +11,7 @@ app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
 
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 })
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
